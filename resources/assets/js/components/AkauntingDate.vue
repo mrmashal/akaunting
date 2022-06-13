@@ -14,7 +14,9 @@
         :disabled="disabled"
         @focus="focus"
         >
-        <flat-picker slot-scope="{focus, blur}"
+        <!-- Note: the tag name is the imported name in kebab case -->
+        <vue-persian-datetime-picker v-model="real_model"></vue-persian-datetime-picker>
+        <!-- <flat-picker slot-scope="{focus, blur}"
             :name="dataName"
             @on-open="focus"
             @on-close="blur"
@@ -24,19 +26,24 @@
             @input="change"
             :readonly="readonly"
             :disabled="disabled">
-        </flat-picker>
+        </flat-picker> -->
     </base-input>
 </template>
 
 <script>
-import flatPicker from "vue-flatpickr-component";
-import "flatpickr/dist/flatpickr.css";
+// import flatPicker from "vue-flatpickr-component";
+// import "flatpickr/dist/flatpickr.css";
+// import 'flatpickr/dist/themes/dark.css';
+import VuePersianDatetimePicker from 'vue-persian-datetime-picker';
+// import moment from "moment-jalaali";
+// window.moment = moment;
 
 export default {
     name: 'akaunting-date',
 
     components: {
-        flatPicker
+        // flatPicker,
+        VuePersianDatetimePicker
     },
 
     props: {
