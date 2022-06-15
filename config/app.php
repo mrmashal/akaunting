@@ -208,6 +208,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         'Date' => App\Utilities\Date::class,
+        'Verta' => Hekmatinasser\Verta\Verta::class,
     ])->toArray(),
 
 ];
