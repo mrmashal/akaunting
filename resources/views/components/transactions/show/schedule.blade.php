@@ -24,7 +24,7 @@
     >
         <div class="flex my-3 space-x-2 rtl:space-x-reverse">
             @if ($next = $transaction->recurring->getNextRecurring())
-                {{ trans('recurring.next_date', ['date' => $next->format(company_date_format())]) }}
+                {{ trans('recurring.next_date', ['date' => $next->formatFa(company_date_format())]) }}
                 <br>
                 @if ($transaction->recurring->limit_by == 'count')
                     @if ($transaction->recurring->limit_count == 0)

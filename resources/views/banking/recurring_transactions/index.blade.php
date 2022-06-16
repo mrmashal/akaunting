@@ -93,7 +93,7 @@
                                                 </x-slot>
                                                 <x-slot name="second">
                                                     @if ($last = $item->recurring->getLastRecurring())
-                                                        {{ $last->format(company_date_format()) }}
+                                                        {{ $last->formatFa(company_date_format()) }}
                                                     @endif
                                                 </x-slot>
                                             </x-table.td>

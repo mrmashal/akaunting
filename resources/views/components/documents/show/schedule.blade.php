@@ -9,7 +9,7 @@
     <x-slot name="body" class="block" override="class">
         <div class="flex my-3 space-x-2 rtl:space-x-reverse">
             @if ($document->recurring && ($next = $document->recurring->getNextRecurring()))
-                {{ trans('recurring.next_date', ['date' => $next->format(company_date_format())]) }}
+                {{ trans('recurring.next_date', ['date' => $next->formatFa(company_date_format())]) }}
                 <br>
                 @if (($document->recurring->limit_by == 'count'))
                     @if ($document->recurring->limit_count == 0)

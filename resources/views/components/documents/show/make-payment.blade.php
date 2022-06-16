@@ -77,7 +77,7 @@
 
                         @php
                             $message = trans('general.delete_confirm', [
-                                'name' => '<strong>' . Date::parse($transaction->paid_at)->format(company_date_format()) . ' - ' . money($transaction->amount, $transaction->currency_code, true) . ' - ' . $transaction->account->name . '</strong>',
+                                'name' => '<strong>' . Date::parse($transaction->paid_at)->formatFa(company_date_format()) . ' - ' . money($transaction->amount, $transaction->currency_code, true) . ' - ' . $transaction->account->name . '</strong>',
                                 'type' => strtolower(trans_choice('general.transactions', 1))
                             ]);
                         @endphp

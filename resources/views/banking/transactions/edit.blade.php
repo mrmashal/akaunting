@@ -18,7 +18,7 @@
                                     {{
                                         trans('recurring.message', [
                                             'type' => mb_strtolower(trans_choice('general.transactions', 1)),
-                                            'date' => $next->format($date_format)
+                                            'date' => $next->formatFa($date_format)
                                         ])
                                     }}
                                 </p>
