@@ -56,7 +56,7 @@ abstract class Import implements HasLocalePreference, ShouldQueue, SkipsEmptyRow
 
             try {
                 $row[$date_field] = Date::parse(ExcelDate::excelToDateTimeObject($row[$date_field]))
-                                        ->format('Y-m-d H:i:s');
+                                        ->formatFa('Y-m-d H:i:s');
             } catch (InvalidFormatException | \Exception $e) {
                 Log::info($e->getMessage());
             }

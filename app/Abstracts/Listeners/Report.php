@@ -258,9 +258,9 @@ abstract class Report
 
                 if ($date->greaterThanOrEqualTo($financial_year->getStartDate()) && $date->lessThanOrEqualTo($financial_year->getEndDate())) {
                     if (setting('localisation.financial_denote') == 'begins') {
-                        $formatted_date = $financial_year->getStartDate()->copy()->format($this->getYearlyDateFormat());
+                        $formatted_date = $financial_year->getStartDate()->copy()->formatFa($this->getYearlyDateFormat());
                     } else {
-                        $formatted_date = $financial_year->getEndDate()->copy()->format($this->getYearlyDateFormat());
+                        $formatted_date = $financial_year->getEndDate()->copy()->formatFa($this->getYearlyDateFormat());
                     }
                 }
 
@@ -273,15 +273,15 @@ abstract class Report
                         continue;
                     }
 
-                    $start = $quarter->getStartDate()->format($this->getQuarterlyDateFormat($event->class->model->year));
-                    $end = $quarter->getEndDate()->format($this->getQuarterlyDateFormat($event->class->model->year));
+                    $start = $quarter->getStartDate()->formatFa($this->getQuarterlyDateFormat($event->class->model->year));
+                    $end = $quarter->getEndDate()->formatFa($this->getQuarterlyDateFormat($event->class->model->year));
 
                     $formatted_date = $start . '-' . $end;
                 }
 
                 break;
             default:
-                $formatted_date = $date->copy()->format($this->getMonthlyDateFormat($event->class->model->year));
+                $formatted_date = $date->copy()->formatFa($this->getMonthlyDateFormat($event->class->model->year));
 
                 break;
         }

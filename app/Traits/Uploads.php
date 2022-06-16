@@ -90,7 +90,7 @@ trait Uploads
             $company_id = company_id();
         }
 
-        $date = Date::now()->format('Y/m/d');
+        $date = Date::now()->formatFa('Y/m/d');
 
         // 2021/04/09/34235/invoices
         return $date . '/' . $company_id . '/' . $folder;
