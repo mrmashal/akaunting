@@ -63,6 +63,6 @@ class Date extends Component
             return Str::ucfirst($date);
         }
 
-        return UDate::parse($date)->format($this->format);
+        return UDate::parse($date)->formatFa($this->format);
     }
 }
