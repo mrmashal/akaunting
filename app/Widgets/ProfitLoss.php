@@ -97,7 +97,7 @@ class ProfitLoss extends Widget
         }
 
         for ($j = $end_month; $j >= $start_month; $j--) {
-            $labels[$end_month - $j] = $s->format('M Y');
+            $labels[$end_month - $j] = $s->formatFa('F Y');
 
             if ($this->period == 'month') {
                 $s->addMonth();

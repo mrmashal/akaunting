@@ -10,4 +10,16 @@
 
 @push('body_scripts')
     {!! $chart->script() !!}
+{{-- mmm doing it server-side, since the x-axis is not datetime!
+<script type="text/javascript">
+    chart_{{ $chart->getId() }}.updateOptions({
+        xaxis:{
+            labels:{
+                formatter: function(value, timestamp, opts) {
+                    return new Date(timestamp).toLocaleDateString('fa');
+                } 
+            }
+        }
+    });
+</script> --}}
 @endpush
