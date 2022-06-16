@@ -115,7 +115,7 @@ export default {
             default: function () {
                 return {
                     allowInput: true,
-                    altFormat: "d M Y",
+                    altFormat: "d F Y",
                     altInput: true,
                     dateFormat: "Y-m-d",
                     wrap: true,

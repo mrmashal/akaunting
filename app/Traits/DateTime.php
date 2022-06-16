@@ -18,7 +18,7 @@ trait DateTime
      */
     public function getCompanyDateFormat()
     {
-        $default = 'd M Y';
+        $default = 'd F Y';
 
         // Make sure it's installed
         if (!config('app.installed') && (config('app.env') !== 'testing')) {
