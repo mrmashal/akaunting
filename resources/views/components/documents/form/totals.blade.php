@@ -1,7 +1,7 @@
 <div class="sm:col-span-6">
     <div class="mb-4 p-0">
         <div class="overflow-y-hidden py-6">
-            <table id="totals" class="float-right">
+            <table id="totals" class="float-left">
                 <colgroup>
                     <col style="width: 47.5%;">
                     <col style="width: 30%;">

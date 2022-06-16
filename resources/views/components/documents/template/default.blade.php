@@ -136,7 +136,7 @@
                             {{ trans($textDocumentNumber) }}:
                         </span>
 
-                        <span class="float-right spacing">
+                        <span class="float-left spacing">
                             {{ $document->document_number }}
                         </span>
                     </p>
@@ -151,7 +151,7 @@
                                 {{ trans($textOrderNumber) }}:
                             </span>
 
-                            <span class="float-right spacing">
+                            <span class="float-left spacing">
                                 {{ $document->order_number }}
                             </span>
                         </p>
@@ -166,7 +166,7 @@
                             {{ trans($textIssuedAt) }}:
                         </span>
 
-                        <span class="float-right spacing">
+                        <span class="float-left spacing">
                             @date($document->issued_at)
                         </span>
                     </p>
@@ -180,7 +180,7 @@
                             {{ trans($textDueAt) }}:
                         </span>
 
-                        <span class="float-right spacing">
+                        <span class="float-left spacing">
                             @date($document->due_at)
                         </span>
                     </p>
@@ -286,12 +286,12 @@
         </div>
     </div>
 
-    <div class="col-40 float-right text-right">
+    <div class="col-40 float-left text-left">
         @foreach ($document->totals_sorted as $total)
             @if ($total->code != 'total')
                 @stack($total->code . '_total_tr_start')
                 <div class="text border-bottom-1 py-1">
-                    <span class="float-left text-semibold">
+                    <span class="float-right text-semibold">
                         {{ trans($total->title) }}:
                     </span>
 
@@ -304,7 +304,7 @@
                 @if ($document->paid)
                     @stack('paid_total_tr_start')
                     <div class="text border-bottom-1 py-1">
-                        <span class="float-left text-semibold">
+                        <span class="float-right text-semibold">
                             {{ trans('invoices.paid') }}:
                         </span>
 
@@ -317,7 +317,7 @@
 
                 @stack('grand_total_tr_start')
                 <div class="text border-bottom-1 py-1">
-                    <span class="float-left text-semibold">
+                    <span class="float-right text-semibold">
                         {{ trans($total->name) }}:
                     </span>
 

@@ -67,8 +67,8 @@
                 :disabled="disabledOptions.includes(option.key)"
                 :label="option.value"
                 :value="option.key">
-                <span class="float-left" :style="'padding-left: ' + (10 * option.level).toString() + 'px;'"><i v-if="option.level != 0" class="material-icons align-middle text-lg ltr:mr-2 rtl:ml-2">subdirectory_arrow_right</i>{{ option.value }}</span>
-                <span class="badge badge-pill badge-success float-right mt-2" v-if="new_options[option.key]">{{ addNew.new_text }}</span>
+                <span class="float-right" :style="'padding-right: ' + (10 * option.level).toString() + 'px;'"><i v-if="option.level != 0" class="material-icons align-middle text-lg ltr:mr-2 rtl:ml-2">subdirectory_arrow_right</i>{{ option.value }}</span>
+                <span class="badge badge-pill badge-success float-left mt-2" v-if="new_options[option.key]">{{ addNew.new_text }}</span>
             </el-option>
 
             <el-option-group
@@ -82,8 +82,8 @@
                     :disabled="disabledOptions.includes(option.key)"
                     :label="option.value"
                     :value="option.key">
-                    <span class="float-left" :style="'padding-left: ' + (10 * option.level).toString() + 'px;'"><i v-if="option.level != 0" class="material-icons align-middle text-lg ltr:mr-2 rtl:ml-2">subdirectory_arrow_right</i>{{ option.value }}</span>
-                    <span class="badge badge-pill badge-success float-right mt-2" v-if="new_options[option.key]">{{ addNew.new_text }}</span>
+                    <span class="float-right" :style="'padding-right: ' + (10 * option.level).toString() + 'px;'"><i v-if="option.level != 0" class="material-icons align-middle text-lg ltr:mr-2 rtl:ml-2">subdirectory_arrow_right</i>{{ option.value }}</span>
+                    <span class="badge badge-pill badge-success float-left mt-2" v-if="new_options[option.key]">{{ addNew.new_text }}</span>
                 </el-option>
             </el-option-group>
 
@@ -167,8 +167,8 @@
                 :disabled="disabledOptions.includes(option.key)"
                 :label="option.value"
                 :value="option.key">
-                <span class="float-left" :style="'padding-left: ' + (10 * option.level).toString() + 'px;'"><i v-if="option.level != 0" class="material-icons align-middle text-lg ltr:mr-2 rtl:ml-2">subdirectory_arrow_right</i>{{ option.value }}</span>
-                <span class="badge badge-pill badge-success float-right mt-2" v-if="new_options[option.key]">{{ addNew.new_text }}</span>
+                <span class="float-right" :style="'padding-left: ' + (10 * option.level).toString() + 'px;'"><i v-if="option.level != 0" class="material-icons align-middle text-lg ltr:mr-2 rtl:ml-2">subdirectory_arrow_right</i>{{ option.value }}</span>
+                <span class="badge badge-pill badge-success float-left mt-2" v-if="new_options[option.key]">{{ addNew.new_text }}</span>
             </el-option>
 
             <el-option-group
@@ -182,8 +182,8 @@
                     :disabled="disabledOptions.includes(option.key)"
                     :label="option.value"
                     :value="option.key">
-                    <span class="float-left" :style="'padding-left: ' + (10 * option.level).toString() + 'px;'"><i v-if="option.level != 0" class="material-icons align-middle text-lg ltr:mr-2 rtl:ml-2">subdirectory_arrow_right</i>{{ option.value }}</span>
-                    <span class="badge badge-pill badge-success float-right mt-2" v-if="new_options[option.key]">{{ addNew.new_text }}</span>
+                    <span class="float-right" :style="'padding-left: ' + (10 * option.level).toString() + 'px;'"><i v-if="option.level != 0" class="material-icons align-middle text-lg ltr:mr-2 rtl:ml-2">subdirectory_arrow_right</i>{{ option.value }}</span>
+                    <span class="badge badge-pill badge-success float-left mt-2" v-if="new_options[option.key]">{{ addNew.new_text }}</span>
                 </el-option>
             </el-option-group>
 

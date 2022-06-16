@@ -16,7 +16,7 @@
         </div>
 
         <div class="card-footer">
-            <div class="float-right">
+            <div class="float-left">
                 @if (Request::is('install/requirements'))
                     <a href="{{ route('install.requirements') }}" class="btn btn-success">
                         {{ trans('install.refresh') }}

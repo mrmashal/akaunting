@@ -5,11 +5,11 @@
                 <input type="checkbox" id="priceToggle" class="sr-only" x-model="price_type">
 
                 <div class="bg-purple-300 w-24 h-7 rounded-full">
-                    <span id="apps-toggle-monthly" class="monthly-badge text-xs text-white float-left ml-3 mt-1.5" x-show="price_type == true">
+                    <span id="apps-toggle-monthly" class="monthly-badge text-xs text-white float-right mr-3 mt-1.5" x-show="price_type == true">
                         {{ trans('general.monthly') }}
                     </span>
 
-                    <span id="apps-toggle-yearly" class="yearly-badge text-xs text-white float-right mr-3 mt-1.5" x-show="price_type == false">
+                    <span id="apps-toggle-yearly" class="yearly-badge text-xs text-white float-left ml-3 mt-1.5" x-show="price_type == false">
                         {{ trans('general.yearly') }}
                     </span>
                 </div>
