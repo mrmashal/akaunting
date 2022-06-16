@@ -26,7 +26,10 @@
                     <div class="flex items-start justify-between font-medium text-sm text-purple mb-1">
                         <div class="flex flex-col">
                             {!! $notification->data['title'] !!}
-                            <span class="text-gray-500" style="font-size: 10px;">{{ \Carbon\Carbon::createFromTimeStamp(strtotime($notification->created_at))->diffForHumans() }}</span>
+                            <span class="text-gray-500" style="font-size: 10px;">
+                                {{-- {{ \Carbon\Carbon::createFromTimeStamp(strtotime($notification->created_at))->diffForHumans() }} --}}
+                                <x-date :date="$notification->created_at" function="diffForHumansFa" />
+                            </span>
                         </div>
 
                         @if ($notification->type != 'updates')

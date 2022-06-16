@@ -98,7 +98,7 @@
                     @if (! $hideDueAt)
                     <x-slot name="first" class="font-bold truncate" override="class">
                         @stack('due_at_td_inside_start')
-                        <x-date :date="$item->due_at" function="diffForHumans" />
+                        <x-date :date="$item->due_at" function="diffForHumansFa" />
                         @stack('due_at_td_inside_end')
                     </x-slot>
                     @endif
