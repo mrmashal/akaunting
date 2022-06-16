@@ -3,6 +3,7 @@
 namespace App\Utilities;
 
 use Carbon\Carbon;
+use Hekmatinasser\Verta\Verta;
 
 class Date extends Carbon
 {
@@ -11,6 +12,11 @@ class Date extends Carbon
     {
         $v = verta($this)->copy();
         return $v->format($format);
+    }
+    public static function parseFa($time = null, $tz = null)
+    {
+        $v = Verta::parse($time, $tz);
+        return Date::instance($v->datetime());
     }
     public function diffForHumansFa($other = null, $syntax = null, $short = false, $parts = 1, $options = null)
     {
