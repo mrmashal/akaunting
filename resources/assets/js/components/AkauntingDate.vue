@@ -15,7 +15,18 @@
         @focus="focus"
         >
         <!-- Note: the tag name is the imported name in kebab case -->
-        <vue-persian-datetime-picker v-model="real_model"></vue-persian-datetime-picker>
+        <vue-persian-datetime-picker slot-scope="{focus, blur}"
+            :name="dataName"
+            @on-open="focus"
+            @on-close="blur"
+            format="YYYY-MM-DD"
+            display-format="jYYYY-jMM-jDD"
+            class="datepicker"
+            v-model="real_model"
+            @input="change"
+            :readonly="readonly"
+            :disabled="disabled">
+        </vue-persian-datetime-picker>
         <!-- <flat-picker slot-scope="{focus, blur}"
             :name="dataName"
             @on-open="focus"
