@@ -6,6 +6,20 @@ use Carbon\Carbon;
 
 class Date extends Carbon
 {
+    // mmm
+    public function formatFa($format)
+    {
+        $v = verta($this)->copy();
+        return $v->format($format);
+    }
+    public function diffForHumansFa($other = null, $syntax = null, $short = false, $parts = 1, $options = null)
+    {
+        $v = verta($this)->copy();
+        return $v->formatDifference();
+    }
+
+
+
     /**
      * Function to call instead of format.
      *
