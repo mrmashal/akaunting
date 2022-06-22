@@ -56,7 +56,8 @@ abstract class Export implements FromCollection, HasLocalePreference, ShouldAuto
             $value = $model->$field;
 
             if (in_array($field, $date_fields)) {
-                $value = ExcelDate::PHPToExcel(Date::parse($value)->formatFa('Y-m-d'));
+                // $value = ExcelDate::PHPToExcel(Date::parse($value)->format('Y-m-d'));
+                $value = Date::parse($value)->formatFa('Y-m-d');
             }
 
             // Prevent CSV injection https://security.stackexchange.com/a/190848
